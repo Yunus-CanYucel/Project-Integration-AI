@@ -17,6 +17,7 @@ public class HomeController {
     }
 
     @GetMapping("/ask")
+    //@Response body används för att returnera texten direkt
     @ResponseBody
     public String prompt(@RequestParam String prompt) {
         return aiService.aiPrompt(prompt);
